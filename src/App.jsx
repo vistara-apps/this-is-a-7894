@@ -5,6 +5,8 @@ import Dashboard from './components/Dashboard';
 import SearchInterface from './components/SearchInterface';
 import ItineraryManager from './components/ItineraryManager';
 import BookingFlow from './components/BookingFlow';
+import SubscriptionManager from './components/SubscriptionManager';
+import PartnerDashboard from './components/PartnerDashboard';
 import AuthModal from './components/AuthModal';
 import { UserProvider } from './context/UserContext';
 import { BookingProvider } from './context/BookingContext';
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/search" element={<SearchInterface />} />
                 <Route path="/itinerary" element={<ItineraryManager />} />
                 <Route path="/booking" element={<BookingFlow />} />
+                <Route path="/subscription" element={<SubscriptionManager />} />
+                <Route path="/partner" element={<PartnerDashboard />} />
               </Routes>
             </main>
 

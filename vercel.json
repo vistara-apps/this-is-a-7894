@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "REACT_APP_AMADEUS_API_KEY": "@amadeus_api_key",
+    "REACT_APP_EXPEDIA_API_KEY": "@expedia_api_key",
+    "REACT_APP_OPENTABLE_API_KEY": "@opentable_api_key",
+    "REACT_APP_GOOGLE_MAPS_API_KEY": "@google_maps_api_key",
+    "REACT_APP_STRIPE_PUBLISHABLE_KEY": "@stripe_publishable_key"
+  },
+  "functions": {
+    "src/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
