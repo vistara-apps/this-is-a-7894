@@ -8,8 +8,6 @@ import BookingFlow from './components/BookingFlow';
 import SubscriptionManager from './components/SubscriptionManager';
 import PartnerDashboard from './components/PartnerDashboard';
 import AuthModal from './components/AuthModal';
-import SubscriptionManager from './components/SubscriptionManager';
-import PartnerDashboard from './components/PartnerDashboard';
 import { UserProvider } from './context/UserContext';
 import { BookingProvider } from './context/BookingContext';
 

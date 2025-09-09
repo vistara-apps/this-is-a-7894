@@ -340,15 +340,7 @@ export class SearchResult {
 }
 
 // Export all models
-export {
-  User,
-  Booking,
-  Itinerary,
-  TripSegment,
-  Subscription,
-  PaymentMethod,
-  SearchResult
-};
+// All models are already exported individually above
 
 // Model factory functions
 export const createUser = (data) => new User(data);
